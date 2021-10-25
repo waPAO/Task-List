@@ -16,7 +16,6 @@ class Todo(db.Model):
 
 
 @app.route('/', methods=['POST', 'GET'])
-
 def index():
     if request.method == 'POST':
         task_content= request.form['content']
@@ -34,7 +33,6 @@ def index():
 
 
 @app.route('/delete/<int:id>')
-
 def delete(id):
     task_to_delete = Todo.query.get_or_404(id)
 
